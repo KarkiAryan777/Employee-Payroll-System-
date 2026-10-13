@@ -70,7 +70,7 @@ public class EmployeeMain {
             System.out.println("Employee ID: " + employee.getEmployeeId());
             System.out.println("Name: " + employee.getName());
             System.out.println("Sales: $" + employee.getSales());
-            System.out.println("commission Rate:" + employee.getCommissionRate() + "%");
+            System.out.println("Commission Rate:" + employee.getCommissionRate() + "%");
             System.out.println("Monthly Pay: $" + employee.calculatePay());
         }
 
