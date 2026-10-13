@@ -6,7 +6,7 @@ public class EmployeeMain {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("=== Employee Payroll System ===");
-        System.out.print(" Choose 1 for Hourly Employee and 2 for Salaried Employee: ");
+        System.out.print(" Choose 1 for Hourly Employee, 2 for Salaried Employee, or 3 for Commission Employee: ");
         int choice = scan.nextInt();
 
         System.out.print("Enter employee ID: ");
@@ -51,6 +51,26 @@ public class EmployeeMain {
             System.out.println("Employee ID: " + employee.getEmployeeId());
             System.out.println("Name: " + employee.getName());
             System.out.println("Annual Salary: $" + employee.getAnnualSalary());
+            System.out.println("Monthly Pay: $" + employee.calculatePay());
+        }
+
+        // Commission Employee
+        else if (choice == 3) {
+
+            System.out.print("Enter sales: ");
+            double sales = scan.nextDouble();
+
+            System.out.print("Enter commission rate: ");
+            double commissionRate = scan.nextDouble();
+
+            CommissionEmployee employee = 
+                    new CommissionEmployee(employeeId, name, sales, commissionRate);
+
+            System.out.println("\n--- Commission Employee ---");
+            System.out.println("Employee ID: " + employee.getEmployeeId());
+            System.out.println("Name: " + employee.getName());
+            System.out.println("Sales: $" + employee.getSales());
+            System.out.println("commission Rate:" + employee.getCommissionRate() + "%");
             System.out.println("Monthly Pay: $" + employee.calculatePay());
         }
 
