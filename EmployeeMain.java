@@ -19,12 +19,13 @@ public class EmployeeMain {
         System.out.print("Enter hourly pay: ");
         double hourlypay = scan.nextDouble();
 
-        Employee employee = new Employee(employeeId, name, hoursworked, hourlypay);
+        HourlyEmployee employee = new HourlyEmployee(employeeId, name, hoursworked, hourlypay);
 
         System.out.println("Employee ID: " + employee.getEmployeeId());
         System.out.println("Employee Name: " + employee.getName());
-        System.out.println("Hours Worked: " + employee.gethoursworked());
-        System.out.println("Hourly Pay: " + employee.gethourlypay());
+        System.out.println("Hours Worked: " + employee.getHoursWorked());
+        System.out.println("Hourly Pay: " + employee.getHourlyRate());
+        System.out.println("Total Pay: $" + employee.calculatePay());
 
         scan.close();
     }
