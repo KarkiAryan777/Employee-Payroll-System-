@@ -35,7 +35,7 @@ public class EmployeeMain {
             System.out.println("Name: " + employee.getName());
             System.out.println("Hours Worked: " + employee.getHoursWorked());
             System.out.println("Hourly Rate: $" + employee.getHourlyRate());
-            System.out.println("Monthly Pay: $" + employee.calculatePay());
+            System.out.println("Total Pay: $" + employee.calculatePay());
         }
 
         // Salaried Employee
@@ -71,7 +71,7 @@ public class EmployeeMain {
             System.out.println("Name: " + employee.getName());
             System.out.println("Sales: $" + employee.getSales());
             System.out.println("Commission Rate:" + employee.getCommissionRate() + "%");
-            System.out.println("Monthly Pay: $" + employee.calculatePay());
+            System.out.println("Total Pay: $" + employee.calculatePay());
         }
 
 
